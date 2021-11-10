@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+	color: red;
+	font-size:8pt;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<h3>회원가입</h3>
+	<form name="writeForm" method="post" action="http://localhost:8080/memberServlet/WriterServlet2">
+		<table border="1" cellspacing="0" cellpadding="5" >
+			<tr>
+				<td width="100" align="center">이름</td>
+				<td>
+					<input type="text" name="name" id="name" placeholder="이름 입력">
+					<div id="nameDiv"></div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="100" align="center">아이디</td>
+				<td>
+					<input type="text" name="id" id="id" placeholder="아이디 입력">
+					<div id="idDiv"></div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="100" align="center">비밀번호</td>
+				<td>
+					<input type="password" name="pwd" id="pwd" size="30" placeholder="비밀번호 입력">
+					<div id="pwdDiv"></div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="100" align="center">재확인</td>
+				<td>
+					<input type="password" name="repwd" id="repwd"  size="30"  placeholder="비밀번호 입력">
+					<div id="repwdDiv"></div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="100" align="center">성별</td>
+				<td>
+					<input type="radio" value="0" name="gender" id="gender" checked>남
+					<input type="radio" value="1" name="gender" id="gender">여
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="100" align="center">이메일</td>
+				<td>
+					<input type="text" name="email1" id="email1">
+					@
+					<input type="text" placeholder="직접 입력" name="email2" id="email2">
+					<select>
+						<option>직접입력</option>
+						<option value="gmail">gmail.com</option>
+						<option value="hanmail">hanmail.net</option>
+						<option value="naver">naver.com</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td width="100" align="center">핸드폰</td>
+				<td>
+					<select style="width:70px;" name="tel1" id="tel1">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="019">019</option>
+					</select>
+					-
+					<input type="text"  name="tel2" id="tel2" size="7" maxlength="4">
+					-
+					<input type="text"  name="tel3" id="tel3" size="7" maxlength="4">
+				</td>
+			</tr>
+		
+			<tr>
+				<td width="100" align="center">주소</td>
+				<td>
+					<input type="text" name="zipcode" id="zipcode" >
+					<input type="button" value="우편번호 검색"><br>
+					<input type="text" name="addr1" id="addr1" size="70" placeholder="주소"><br>
+					<input type="text" name="addr2" id="addr2" size="70" placeholder="상세주소">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" id="checkBtn" value="회원가입">
+					<input type="reset" value="다시작성">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/memberServlet/js/memberAlone.js"></script>
+</body>
+</html>
